@@ -1,9 +1,9 @@
 meta:
-  title: Private label demo
+  title: {{process.env.NAME}} Private label demo
   description: The best API documentation generator ever.
   siteUrl: https://portal-demo.redoc.ly
   keywords: redocly developer portal, api portal starter, api reference docs
-logo: ./images/logo.png
+logo: {{process.env.LOGO}}
 enableToc: true
 oasDefinitions:
   petstore: ./openapi/petstore.yaml
@@ -29,7 +29,7 @@ nav:
   - search: true
 
 footer:
-  copyrightText: Copyright © Redocly 2019-2021. All right reserved.
+  copyrightText: Copyright © {{process.env.NAME}} 2019-2021. All right reserved.
   columns:
     - group: Legal
       items:
