@@ -2,7 +2,7 @@
 title: Demo API Portal
 ---
 
-import { LandingLayout } from '@redocly/ui';
+import { LandingLayout } from '@redocly/developer-portal/ui';
 
 import {
   Button,
@@ -18,7 +18,7 @@ import {
   SectionHeader,
 } from '@redocly/ui';
 
-import { NavBar } from '@redocly/ui';
+import { NavBar } from '@redocly/developer-portal/ui';
 
 import icon1 from './images/icon1.png';
 import launchFastIcon from './images/launch-fast.svg';
@@ -30,7 +30,7 @@ export default LandingLayout;
 
 <Jumbotron>
   <NavBar location={props.location} standalone={false} />
-  <H1>Redocly training</H1>
+  <H1>{process.env.NAME} training</H1>
   <H2>A starter developer portal with training exercises</H2>
   <Flex p={20} justifyContent="center">
     {/* <Button inversed large to="https://app.redoc.ly">
