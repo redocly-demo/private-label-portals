@@ -1,4 +1,4 @@
-# Redocly API developer portal
+# Private label demo of Redocly Developer portal
 
 ## Prerequisites
 
@@ -25,7 +25,46 @@ We heavily rely on caching for performance issues so if some changes are not ref
 
 Read the [online documentation](https://redoc.ly/docs/developer-portal/introduction/).
 
-## Training program
+## Environments for each materialized portal
 
-The starter template contains training exercises which will teach you how to build a developer portal.
-After you start the development server, navigate to the app and follow the instructions to get started with your training.
+We'll make 3 private label portals:
+
+- rock
+- paper
+- scissors
+
+We'll use [environment variable files](https://redoc.ly/docs/developer-portal/environment-variables/) to do this by adding these files:
+
+- env.rock
+- env.paper
+- env.scissors
+
+> Override which environment file is used by setting an environment variable named `REDOCLY_ACTIVE_ENV`.
+
+### Variables
+
+To simplify this private label demo, we'll set three variables:
+
+- LOGO
+- NAME
+- PRIMARY_COLOR
+
+There is no restriction on the number of variables you set (but there is some restriction in the naming, such as don't start them with `REDOCLY_`).
+
+### Usage of env variables
+
+In yaml:
+
+- `{{process.env.MY_TITLE}}`
+
+In md (and md portion of mdx pages):
+
+- `{{process.env.MY_TITLE}}`
+
+In js (and jsx portions of mdx pages):
+
+-  `<H1>Heading In Here Big Text {process.env.WELCOME_MESSAGE}</H1>`
+
+In ts (e.g. in theme.ts):
+
+- `process.env.MY_TITLE`
